@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="./normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    
+  </head>
+
+  <body>
+    <header class="header-main">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container">
+
+    
+      <!-- This form will be where users input data about the cities -->
+
+      <div id="searchForm" >
+        <h4>Search for a City</h4>
+
+        <input type="text" id="city-input"  />
+<!--/><br-->
+        <!-- This button will trigger our AJAX call -->
+        <button id="search" type="submit">
+          GO <i class="fas fa-search-location"></i>
+        </button>
+       <div id="history">Recantly search</div>
+      </div>
+
+      <!-- We'll be dumping our JSON contents in here -->
+     <!-- <div class="col-md-8"> -->
+         <div class="results">
+        <div id="cityView" style="display:none">
+          <div class="today">
+            <div class="city-name"></div>
+            <p id="date"></p>
+            <script>
+              n = new Date();
+              y = n.getFullYear();
+              m = n.getMonth() + 1;
+              d = n.getDate();
+              document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+            </script>
+            <img class="icon"/>
+            <div class="temp">Temperature:</div>
+            <div class="hum">Humidity:</div>
+            <div class="wind">Wind Speed:</div>
+            <div class="uv">UV index:</div>
+          </div>
+          <div class="fiveDays">
+            <div class="day">
+              <div class="dateOne"></div>
+              <img class="iconOne"/>
+              <div class="tempOne"></div>
+              <div class="humOne"></div>
+            </div>
+            <div class="day">
+              <div class="dateTwo"></div>
+              <img class="iconTwo"/>
+              <div class="tempTwo"></div>
+              <div class="humTwo"></div>
+            </div>
+            <div class="day">
+              <div class="dateThree"></div>
+              <img class="iconThree"/>
+              <div class="tempThree"></div>
+              <div class="humThree"></div>
+            </div>
+            <div class="day">
+              <div class="dateFour"></div>
+              <img class="iconFour"/>
+              <div class="tempFour"></div>
+              <div class="humFour"></div>
+            </div>
+            <div class="day">
+              <div class="dateFive"></div>
+              <img class="iconFive"/>
+              <div class="tempFive"></div>
+              <div class="humFive"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="./app.js"></script>
+    
+  </body>
+</html>
+
+<!-- header (snazy name)-->
+<!-- search input box (event on mag glass) -->
+<!-- list of previous searches (event on history click) -->
+<!-- current dorky weather status on the city -->
+<!-- 5 day weather outlook -->
+<!--for (var i=0; i<data.list.length; i++){ if(data.list[i].dt_txt.indexOf) } -->

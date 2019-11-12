@@ -1,0 +1,32 @@
+.header-main {
+  padding: 5px;
+  background-color: rgb(104, 106, 107);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+#searchForm {
+  background-color: rgb(222, 229, 235);
+  width: 99%;
+  padding: 10px;
+}
+
+.fiveDays {
+  display: flex;
+}
+.day {
+  background-color: rgb(7, 152, 209);
+  width: 20%;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  border-style: solid;
+}
+.today {
+  padding: 5px;
+  margin: 5px;
+  border-style: solid;
+}
