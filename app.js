@@ -85,7 +85,7 @@ $("#search").on("click", function(event) {
     $(".city-name").html("<h2>" + response.name + "</h2>");
     $(".icon").attr(
       "src",
-      "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
+      "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
     );
 
     $(".temp").text("Temperature: " + response.main.temp + " F");
@@ -96,7 +96,7 @@ $("#search").on("click", function(event) {
     var lon = response.coord.lon;
 
     var queryURL =
-      "http://api.openweathermap.org/data/2.5/uvi?appid=" +
+      "https://api.openweathermap.org/data/2.5/uvi?appid=" +
       APIKey +
       "&lat=" +
       lat +
